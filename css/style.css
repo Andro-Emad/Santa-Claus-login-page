@@ -1,45 +1,40 @@
 /* 31.12.2021 */
-body {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+section {
   color: #fff;
   font-family: "Roboto", sans-serif;
   background: url(../image/6201596-1396169010.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
   height: 100vh;
-  margin: 0;
+  background-position: center;
 }
-* {
-  box-sizing: border-box;
-  /* */
-}
-.tom {
+.Box {
   padding: 20px;
-  /* text-align: center; خط في المنتصف */
-  /* جعل الصندوق في المنتصف */
-  position: absolute; /* عام في الهواء */
+  position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-
-  /* background-color: rgb(255 255 255 / 25%); */
   width: 400px;
   background-color: #0000004d;
   box-shadow: 0px 0px 9px 2px rgb(255 255 255 / 70%);
 }
 @media (max-width: 767px) {
-  /* في حالة فتح الموقع علي الهاتف يقوم بعمل التالي في هذا العناصر*/
-  .tom {
+  .Box {
     width: 80%;
   }
 }
-.ai {
+section .Box .link .ai {
   margin-right: 20px;
   display: inline-block;
   text-decoration: none;
   color: #fff;
 }
-.si {
+section .Box .link .si {
   border-bottom: 2px #e91e63 solid;
   padding-bottom: 5px;
   margin-right: 20px;
@@ -47,14 +42,13 @@ body {
   text-decoration: none;
   color: #fff;
 }
-
-.use,
-.ema,
-.pas {
+.Username,
+.Email,
+.Password {
   padding: 15px 0;
+  caret-color: #e91e62;
 }
-
-input {
+section .Box form input {
   width: 100%;
   background-color: transparent;
   outline: none;
@@ -62,25 +56,21 @@ input {
   border-bottom: #eee 2px solid;
   padding: 10px 0;
   color: white;
-  transition: 0.5s; /* يعني يعمل الحدث دي في زمن 0.5 ثانيه */
+  transition: 0.5s;
 }
-input:hover {
-  /* في حالة تحريك الماوس علي هذا العنصر يعمل التالي */
+section .Box form input:hover {
   border-bottom: #e91e62 2px solid;
 }
 ::placeholder {
   color: #eee;
 }
-.an {
+section .Box form .Checkbox {
   margin-top: 20px;
 }
-.an input {
+section .Box form .Checkbox input {
   width: fit-content;
 }
-/* .an input[type="Checkbox"]:checked + label {
-  color: green;
-} */
-.reg {
+section .Box form .button {
   border: none;
   width: 70%;
   background-color: #e91e6382;
@@ -88,12 +78,11 @@ input:hover {
   margin-top: 40px;
   display: block;
   border-radius: 50px;
-  transition: 0.5s; /* يعني يعمل الحدث دي في زمن 0.5 ثانيه */
+  transition: 0.5s;
   margin-bottom: 30px;
   border-bottom: none;
 }
-.reg:hover {
-  /* في حالة تحريك الماوس علي هذا العنصر يعمل التالي */
+section .Box form .button:hover {
   background-color: #e91e62;
   box-shadow: 0px 0px 7px 2px #e91e62;
   border-bottom: none;
